@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.atag::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: cyan;
+    transform-origin: top;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.atag:hover::before,
+.atag:focus::before {
+    transform: scale(1);
+
+}
